@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:localstorage/task_Card.dart';
+import 'package:localstorage/task_add.dart';
+import 'package:localstorage/task_list_view.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,7 +17,17 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text("Event Manager"),
       ),
-    body: TaskCard(),
+      body: TaskList(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          await Navigator.of(context)
+              .push(MaterialPageRoute(builder: (_) => AddTask()));
+              setState(() {
+                
+              });
+        },
+        child: Icon(Icons.add),
+      ),
     );
   }
 }

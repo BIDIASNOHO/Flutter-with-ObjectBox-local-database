@@ -24,7 +24,7 @@
     },
     {
       "id": "2:7912876471781248319",
-      "lastPropertyId": "4:3349278380321026425",
+      "lastPropertyId": "5:4440960575739528903",
       "name": "Task",
       "properties": [
         {
@@ -50,13 +50,50 @@
           "flags": 520,
           "indexId": "1:1491249509785985518",
           "relationTarget": "Owner"
+        },
+        {
+          "id": "5:4440960575739528903",
+          "name": "eventId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "2:3287597233622485172",
+          "relationTarget": "Event"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:1482929445850015580",
+      "lastPropertyId": "4:1339377269511676892",
+      "name": "Event",
+      "properties": [
+        {
+          "id": "1:452519684049535351",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6202769779280024329",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:981951654527300006",
+          "name": "date",
+          "type": 10
+        },
+        {
+          "id": "4:1339377269511676892",
+          "name": "location",
+          "type": 9
         }
       ],
       "relations": []
     }
   ],
-  "lastEntityId": "2:7912876471781248319",
-  "lastIndexId": "1:1491249509785985518",
+  "lastEntityId": "3:1482929445850015580",
+  "lastIndexId": "2:3287597233622485172",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",
   "modelVersion": 5,
