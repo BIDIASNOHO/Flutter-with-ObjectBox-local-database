@@ -64,10 +64,12 @@ class Objectbox {
 
   Stream<List<Event>> getEvent() {
     final builder = eventBox.query()..order(Event_.date);
+    return builder.watch(triggerImmediately: true).map((event) => event.find());
   }
 
-  Stream<List<Task>> getTasks() {
+  Stream<List<Task>> getTasksOfEvent(int eventId) {
     final builder = taskBox.query()..order(Task_.id, flags: Order.descending);
+    builder.link(Task_.event, Event_.id.equals(eventId));
     return builder.watch(triggerImmediately: true).map((query) => query.find());
   }
 }

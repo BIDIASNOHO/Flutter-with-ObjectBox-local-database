@@ -3,7 +3,8 @@ import 'package:localstorage/main.dart';
 import 'package:localstorage/model.dart';
 
 class AddTask extends StatefulWidget {
-  const AddTask({super.key});
+  final Event event;
+  const AddTask({super.key, required this.event});
 
   @override
   State<AddTask> createState() => _AddTaskState();
@@ -17,7 +18,7 @@ class _AddTaskState extends State<AddTask> {
 
   void createTask() {
     if (inputController.text.isNotEmpty) {
-      objectbox.addTask(inputController.text, currentOwner);
+      objectbox.addTask(inputController.text, currentOwner, widget.event);
     }
   }
 
